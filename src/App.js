@@ -20,7 +20,7 @@ function App() {
       body: JSON.stringify({
         model: 'gpt-3.5-turbo-instruct',
         prompt: input,
-        max_tokens: 40,
+        max_tokens: 80,
         temperature: 0,
       }),
     })
@@ -29,13 +29,13 @@ function App() {
       .catch(error => console.error(error));
   };
   return (
-    <div className='bg-rose-100 p-4 flex flex-col shadow-sm w-72'>
-      <h1 className='text-2xl text-rose-500 font-bold mb-2'>Insights AI</h1>
-      <h2 className='text-lg text-rose-400 mb-2'>Enter your Doubt/Query</h2>
+    <div className='bg-slate-900 p-4 flex flex-col shadow-sm w-[22rem]'>
+      <h1 className='text-2xl text-white font-bold mb-2'>Insights AI</h1>
+      <h2 className='text-lg text-white mb-2'>Enter your Doubt/Query</h2>
       <form onSubmit={handleSubmit} className='flex flex-col'>
-        <input type="text" onChange={handleInput} value={input} className='border-2 border-rose-200 rounded-md p-2 focus:outline-none focus:border-rose-300 mb-2' />
-        <p className='text-md text-neutral-700 mb-2'>{result}</p>
-        <button type="submit" className='bg-rose-500 text-white rounded-md py-2 hover:bg-rose-400 transition-colors duration-300'>Submit</button>
+        <input type="text" onChange={handleInput} value={input} className='border-2 border-slate-300 rounded-md p-2 focus:outline-none focus:border-slate-400 mb-2' />
+        <p className='text-md text-white mb-2'>{result}</p>
+        <button type="submit" className='bg-white text-slate-900 rounded-md py-2 hover:bg-slate-100 font-bold'>Submit</button>
       </form>
     </div>
   );
